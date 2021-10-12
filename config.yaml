@@ -7,7 +7,8 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Start exploring
-    subtitle: An introduction to me and why I believe that tennis and data analytics have similar ingredients to success 
+    subtitle: An introduction to me and why I believe that tennis and data analytics have similar ingredients to success. 
+    Scroll down to discover what dimensions define the two disciplines and find out where I see my strengths and weaknesses. 
     title: Tennis, Data Analytics, and Me 
   blog: {}
   contact:
@@ -76,6 +77,14 @@ params:
   tiles:
     enable: yes
     showcase:
+      - image: person.jpg
+        subtitle: What you need to know to get started
+        title: About me
+        url: blogs/ipsum
+      - image: collage.jpg
+        subtitle: How this website connects two unrelated disciplines
+        title: About tennis and data analytics
+        url: blogs/ipsum
       - image: tennis_practice.jpg
         subtitle: Both disciplines require rigorous training
         title: Practice
@@ -92,14 +101,7 @@ params:
         subtitle: Mistakes, failure, and losses are part of the game
         title: Failure
         url: blogs/ipsum
-      - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
-        url: blogs/ipsum
-      - image: pic06.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Etiam
-        url: blogs/ipsum
+
   two:
     buttonText: Get Started
     enable: yes
