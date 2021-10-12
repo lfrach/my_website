@@ -1,14 +1,14 @@
 baseURL: https://louisfrach.netlify.app/
 languageCode: en-us
-title: Louis' Portfolio Website!!!
+title: Tennis, Data Analytics, and Me
 theme: forty
 googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
-    buttonText: Get Started
-    subtitle: An introfuction to me and why I believe that tennis and data analytics are quite similar 
-    title: Tennis and Data Analytics - Similar Ingredients to Success 
+    buttonText: Start exploring
+    subtitle: An introduction to me and why I believe that tennis and data analytics have similar ingredients to success 
+    title: Tennis, Data Analytics, and Me 
   blog: {}
   contact:
     address:
@@ -77,20 +77,20 @@ params:
     enable: yes
     showcase:
       - image: tennis_practice.jpg
-        subtitle: Practice
-        title: Both disciplines require rigorous training
+        subtitle: Both disciplines require rigorous training
+        title: Practice
         url: blogs/aliquam
-      - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Tempus
+      - image: coding_1.jpg
+        subtitle: Data analytics as well as tennis rely on a strong technical foundation
+        title: Technical Finesse
         url: blogs/tempus
-      - image: pic03.jpg
-        subtitle: Lorem Etiam Nullam
-        title: Magna
+      - image: teamwork.jpg
+        subtitle: Nothing amplifies success more than working in teams
+        title: Teamwork
         url: blogs/magna
-      - image: pic04.jpg
-        subtitle: Nisl Sed Aliquam
-        title: Ipsum
+      - image: failure.jpg
+        subtitle: Mistakes, failure, and losses are part of the game
+        title: Failure
         url: blogs/ipsum
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
