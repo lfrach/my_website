@@ -7,22 +7,20 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Get Started
-    subtitle: |-
-      A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-      AND RELEASED UNDER THE CREATIVE COMMONS.
-    title: Welcome to my portfolio website!
+    subtitle: An introfuction to me and why I believe that tennis and data analytics are quite similar 
+    title: Tennis and Data Analytics - Similar Ingredients to Success 
   blog: {}
   contact:
     address:
       - city: London, NW1 4SA
         country: United Kingdom
         street: Regent's Park
-        title: My university's address
+        title: London Business School Address
     buttonClear: Clear
     buttonSend: Send message
     email:
       - email: lfrach.mfa2022@london.edu
-        title: Email
+        title: Personal Email
     enable: yes
     phone:
       - phone: 020 7000 7000
@@ -35,22 +33,19 @@ params:
     text: Please visit [this page](/)
   favicon: favicon.ico
   footer:
-    copyright: Louis Enterprises
+    copyright: Louis DataCo
     enable: yes
     quicklinks:
       - alt: HTML5 UP
         text: 'Design: '
         url: https://www.html5up.net
     social:
-      #- icon: fa-twitter
-      # label: Twitter
-      # url: https://www.twitter.com
       - icon: fa-facebook
         label: Facebook
-        url: https://www.facebook.com
+        url: https://www.facebook.com/LondonBusinessSchool/
       - icon: fa-instagram
         label: Instagram
-        url: https://www.instagram.com
+        url: https://www.instagram.com/londonbschool/
       - icon: fa-github
         label: GitHub
         url: https://github.com/lfrach
@@ -81,9 +76,9 @@ params:
   tiles:
     enable: yes
     showcase:
-      - image: pic01.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Aliquam
+      - image: tennis_practice.jpg
+        subtitle: Practice
+        title: Both disciplines require rigorous training
         url: blogs/aliquam
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
