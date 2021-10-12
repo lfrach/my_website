@@ -1,6 +1,6 @@
 baseURL: https://louisfrach.netlify.app/
 languageCode: en-us
-title: Louis' Portfolio Website
+title: Louis' Portfolio Website!!!
 theme: forty
 googleAnalytics: ''
 disqusShortname: ''
@@ -14,10 +14,10 @@ params:
   blog: {}
   contact:
     address:
-      - city: City, ST 00000
-        country: Country
-        street: Street
-        title: Address
+      - city: London, NW1 4SA
+        country: United Kingdom
+        street: Regent's Park
+        title: My university's address
     buttonClear: Clear
     buttonSend: Send message
     email:
