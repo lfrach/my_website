@@ -52,7 +52,7 @@ params:
       - icon: fa-linkedin
         label: LinkedIn
         url: https://www.linkedin.com/in/louis-frach-5a9741142/
-  image: ''
+  image: ""
   name: Your name
   navigation:
     button1:
@@ -91,7 +91,7 @@ params:
       - image: coding_1.jpg
         subtitle: Data analytics as well as tennis rely on a strong technical foundation
         title: 2. Technical Finesse
-        url: blogs/tempus
+        url: blogs/technical_finesse
       - image: teamwork.jpg
         subtitle: Nothing amplifies success more than working in teams
         title: 3. Teamwork

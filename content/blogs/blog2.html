@@ -15,7 +15,7 @@ title: Practice
 
 
 <p>The first dimension to discuss is Practice. Clearly, practice is key for success in both tennis and data analytics. I started playing tennis when I was only 4 years old and now, almost 20 years later, most movements feel natural and intuitive to me. The same can be said about practice in data analytics. At first, it feels unnatural to assign values to variables, follow certain conventions in data cleaning, or plot complex relationships.</p>
-<p>I want to use this site to show you how practice has helped me to improve on data visualisation.</p>
+<p>I want to use this site to show you how practice has helped me to improve on data visualization. The first example shows you the first graph I ever plotted using R - a very simple data set and a straight-forward visualization. Keep scrolling to see where a <strong>lot of practice</strong> has brought me!</p>
 <pre class="r"><code>country_data &lt;- gapminder %&gt;% 
             filter(country == &quot;Germany&quot;)
 
@@ -28,3 +28,22 @@ continent_data &lt;- gapminder %&gt;%
 plot1</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/blogs/blog2_files/figure-html/lifeExp_one_country-1.png" width="672" /></p>
+<p>Fast-forward 3 weeks of practice, here are some <strong>more complex data visualizations</strong> that I have been working on. The key takeaway for me: practice, while leading to frustration and failure along the way, eventually makes perfect (i.e., better, not actually perfect)</p>
+<pre class="r"><code>yield_curve &lt;- read_csv(here::here(&quot;data&quot;, &quot;yield_curve.csv&quot;))</code></pre>
+<pre><code>## Rows: 6884 Columns: 5</code></pre>
+<pre><code>## -- Column specification --------------------------------------------------------
+## Delimiter: &quot;,&quot;
+## chr  (3): series_id, maturity, duration
+## dbl  (1): value
+## date (1): date</code></pre>
+<pre><code>## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<div id="the-us-yield-curve-from-1999-2021-by-month" class="section level3">
+<h3>The US Yield Curve from 1999-2021, by Month</h3>
+<p><img src="/blogs/blog2_files/figure-html/yield_curve_1-1.png" width="100%" /></p>
+</div>
+<div id="monthly-yields-on-us-rates-by-duration-since-1999-on-a-year-by-year-basis" class="section level3">
+<h3>Monthly yields on US rates by duration since 1999 on a year-by-year basis</h3>
+<p><img src="/blogs/blog2_files/figure-html/yield_curve_2-1.png" width="100%" /></p>
+</div>

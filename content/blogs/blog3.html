@@ -1,0 +1,65 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:13-05:00"
+description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna
+  sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa
+  sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem
+  consequat tincidunt. Vivamus et sagittis tempus.
+draft: false
+image: backhand.jpg
+keywords: ""
+slug: technical_finesse
+title: Technical Finesse
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div class="figure">
+<img src="https://www.perfect-tennis.com/wp-content/uploads/2012/12/Who-has-the-best-one-handed-backhand.jpg" alt="" />
+<p class="caption">Roger Federer at the Australian Open</p>
+</div>
+<p>The second dimension to discuss is Technical Finesse. Again, no tennis player and no data analyst can be successful without a strong technical foundation. Hitting a backhand, like can be seen in the image, undoubtedly requires excellent technical skills.</p>
+<p>In the following, you can see an excerpt of my project on Hollywood directors and their ability to continuously produce highly-rated movies. Coming up with the confidence intervals for the plot requires a solid understanding of statistical analysis.</p>
+<pre class="r"><code>movies &lt;- read_csv(here::here(&quot;data&quot;, &quot;movies.csv&quot;))</code></pre>
+<pre><code>## Rows: 2961 Columns: 11</code></pre>
+<pre><code>## -- Column specification --------------------------------------------------------
+## Delimiter: &quot;,&quot;
+## chr (3): title, genre, director
+## dbl (8): year, duration, gross, budget, cast_facebook_likes, votes, reviews,...</code></pre>
+<pre><code>## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>#summarising the relevant CI values for the two directors
+two_directors&lt;-movies %&gt;% 
+  filter(director %in% c(&quot;Steven Spielberg&quot;, &quot;Tim Burton&quot;)) %&gt;% 
+  group_by(director) %&gt;%
+  summarise(mean=mean(rating),
+            sd=sd(rating),
+            rating=mean(rating),
+            count=n(),
+            t_critical=qt(p=0.975, count-1),
+            xmin=mean-t_critical*(sd/sqrt(count)),
+            xmax=mean+t_critical*(sd/sqrt(count)))
+
+
+#plotting the mean and confidence intervals, including the overlap
+ggplot(two_directors, aes(x=rating, y=fct_reorder(director, rating)))+
+  geom_line(aes(color=director))+
+  geom_point(aes(color=director))+
+  geom_errorbar(aes(xmin=xmin, xmax=xmax, color=director), width=.1) +
+  geom_rect(xmin=7.27, xmax=7.33, ymin=0, ymax=100, alpha=0.2)+
+  geom_text(aes(label=round(mean, digits = 2)),vjust=-1)+
+  geom_text(aes(x=xmin,label=round(xmin, digits = 2)),vjust=-1)+
+  geom_text(aes(x=xmax,label=round(xmax, digits = 2)),vjust=-1)+
+  theme(legend.position = &quot;none&quot;)+
+  labs(title = &quot;Do Spielberg and Burton have the same mean IMDB rating?&quot;,
+       subtitle = &quot;95% confidence interval overlap&quot;,
+       x = &quot;Mean IMDB Rating&quot;, 
+       y=&quot;&quot;,
+       legend = &quot;Director&quot;)</code></pre>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
+<p><img src="/blogs/blog3_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>

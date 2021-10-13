@@ -1,0 +1,77 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:13-05:00"
+description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna
+  sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa
+  sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem
+  consequat tincidunt. Vivamus et sagittis tempus.
+draft: false
+image: backhand.jpg
+keywords: ""
+slug: technical_finesse
+title: Technical Finesse
+---
+
+![Roger Federer at the Australian Open](https://www.perfect-tennis.com/wp-content/uploads/2012/12/Who-has-the-best-one-handed-backhand.jpg)
+
+
+
+The second dimension to discuss is Technical Finesse. Again, no tennis player and no data analyst can be successful without a strong technical foundation. Hitting a backhand, like can be seen in the image, undoubtedly requires excellent technical skills. 
+
+
+In the following, you can see an excerpt of my project on Hollywood directors and their ability to continuously produce highly-rated movies. Coming up with the confidence intervals for the plot requires a solid understanding of statistical analysis.  
+
+
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(ggthemes)
+library(GGally)
+library(readxl)
+library(here)
+library(skimr)
+library(janitor)
+library(broom)
+library(tidyquant)
+
+```
+
+
+
+
+```{r load-movies-data}
+movies <- read_csv(here::here("data", "movies.csv"))
+```
+
+
+```{r}
+#summarising the relevant CI values for the two directors
+two_directors<-movies %>% 
+  filter(director %in% c("Steven Spielberg", "Tim Burton")) %>% 
+  group_by(director) %>%
+  summarise(mean=mean(rating),
+            sd=sd(rating),
+            rating=mean(rating),
+            count=n(),
+            t_critical=qt(p=0.975, count-1),
+            xmin=mean-t_critical*(sd/sqrt(count)),
+            xmax=mean+t_critical*(sd/sqrt(count)))
+
+
+#plotting the mean and confidence intervals, including the overlap
+ggplot(two_directors, aes(x=rating, y=fct_reorder(director, rating)))+
+  geom_line(aes(color=director))+
+  geom_point(aes(color=director))+
+  geom_errorbar(aes(xmin=xmin, xmax=xmax, color=director), width=.1) +
+  geom_rect(xmin=7.27, xmax=7.33, ymin=0, ymax=100, alpha=0.2)+
+  geom_text(aes(label=round(mean, digits = 2)),vjust=-1)+
+  geom_text(aes(x=xmin,label=round(xmin, digits = 2)),vjust=-1)+
+  geom_text(aes(x=xmax,label=round(xmax, digits = 2)),vjust=-1)+
+  theme(legend.position = "none")+
+  labs(title = "Do Spielberg and Burton have the same mean IMDB rating?",
+       subtitle = "95% confidence interval overlap",
+       x = "Mean IMDB Rating", 
+       y="",
+       legend = "Director")
