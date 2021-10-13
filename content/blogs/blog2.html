@@ -1,0 +1,30 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:09-05:00"
+description: Lorem Etiam Nullam
+draft: false
+image: tennis_practice.jpg
+keywords: ""
+slug: practice
+title: Practice
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>The first dimension to discuss is Practice. Clearly, practice is key for success in both tennis and data analytics. I started playing tennis when I was only 4 years old and now, almost 20 years later, most movements feel natural and intuitive to me. The same can be said about practice in data analytics. At first, it feels unnatural to assign values to variables, follow certain conventions in data cleaning, or plot complex relationships.</p>
+<p>I want to use this site to show you how practice has helped me to improve on data visualisation.</p>
+<pre class="r"><code>country_data &lt;- gapminder %&gt;% 
+            filter(country == &quot;Germany&quot;)
+
+continent_data &lt;- gapminder %&gt;% 
+            filter(continent == &quot;Europe&quot;)</code></pre>
+<pre class="r"><code>plot1 &lt;- ggplot(data = country_data, mapping = aes(x = year, y = lifeExp))+
+    geom_point() +
+    geom_smooth(se = FALSE)+
+    NULL 
+plot1</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/blogs/blog2_files/figure-html/lifeExp_one_country-1.png" width="672" /></p>

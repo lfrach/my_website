@@ -7,8 +7,7 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Start exploring
-    subtitle: An introduction to me and why I believe that tennis and data analytics have similar ingredients to success. 
-    Scroll down to discover what dimensions define the two disciplines and find out where I see my strengths and weaknesses. 
+    subtitle: Keep scrolling to find out how these three seemingly unrelated things are connected and find out more about me along the way.
     title: Tennis, Data Analytics, and Me 
   blog: {}
   contact:
@@ -80,34 +79,31 @@ params:
       - image: person.jpg
         subtitle: What you need to know to get started
         title: About me
-        url: blogs/aliquam
+        url: blogs/intro
       - image: collage.jpg
         subtitle: How this website connects two unrelated disciplines
-        title: About tennis and data analytics
-        url: blogs/ipsum
+        title: Tennis and data analytics
+        url: blogs/data_and_tennis
       - image: tennis_practice.jpg
         subtitle: Both disciplines require rigorous training
-        title: Practice
-        url: blogs/aliquam
+        title: 1. Practice
+        url: blogs/practice
       - image: coding_1.jpg
         subtitle: Data analytics as well as tennis rely on a strong technical foundation
-        title: Technical Finesse
+        title: 2. Technical Finesse
         url: blogs/tempus
       - image: teamwork.jpg
         subtitle: Nothing amplifies success more than working in teams
-        title: Teamwork
+        title: 3. Teamwork
         url: blogs/magna
-      - image: failure.jpg
-        subtitle: Mistakes, failure, and losses are part of the game
-        title: Failure
+      - image: success.jpg
+        subtitle: There's nothing like winning a trophy or cracking the code
+        title: 4. Success
         url: blogs/ipsum
 
   two:
     buttonText: Connect here
     enable: yes
-    subtitle: I hope that this website has given you some insights on me as a person and how two seemingly 
-    unrelated disciplines are actually quite similar. Should you share some of the same values that 
-    I have described throughout this site, feel free to connect with me on LinkedIn! I am looking forward 
-    to hearing from you.
+    subtitle: I hope that this website has given you some insights on me as a person and how two seemingly unrelated disciplines are actually quite similar. Should you share some of the same values that I have described throughout this site, feel free to connect with me on LinkedIn! I am looking forward to hearing from you.
     title: Next steps
-    url: blogs
+    url: https://www.linkedin.com/in/louis-frach-5a9741142/

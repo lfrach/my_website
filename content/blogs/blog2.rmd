@@ -1,0 +1,42 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:09-05:00"
+description: Lorem Etiam Nullam
+draft: false
+image: tennis_practice.jpg
+keywords: ""
+slug: practice
+title: Practice
+---
+The first dimension to discuss is Practice. Clearly, practice is key for success in both tennis and data analytics. I started playing tennis when I was only 4 years old and now, almost 20 years later, most movements feel natural and intuitive to me. The same can be said about practice in data analytics. At first, it feels unnatural to assign values to variables, follow certain conventions in data cleaning, or plot complex relationships. 
+
+I want to use this site to show you how practice has helped me to improve on data visualisation. 
+
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(gapminder)  # gapminder dataset
+library(here)
+library(janitor)
+```
+
+
+```{r}
+country_data <- gapminder %>% 
+            filter(country == "Germany")
+
+continent_data <- gapminder %>% 
+            filter(continent == "Europe")
+```
+
+
+```{r, lifeExp_one_country}
+plot1 <- ggplot(data = country_data, mapping = aes(x = year, y = lifeExp))+
+    geom_point() +
+    geom_smooth(se = FALSE)+
+    NULL 
+plot1
+```  
+  
