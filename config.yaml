@@ -80,7 +80,7 @@ params:
       - image: person.jpg
         subtitle: What you need to know to get started
         title: About me
-        url: blogs/ipsum
+        url: blogs/aliquam
       - image: collage.jpg
         subtitle: How this website connects two unrelated disciplines
         title: About tennis and data analytics

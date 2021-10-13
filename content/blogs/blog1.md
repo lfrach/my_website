@@ -5,10 +5,10 @@ categories:
 date: "2017-10-31T21:28:43-05:00"
 description: ""
 draft: false
-image: pic10.jpg
+image: collage.jpg
 keywords: ""
 slug: ipsum
-title: Ipsum
+title: About tennis and data analytics
 ---
 
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+By now, you should have a first impression of who I am and where I am coming from. To really find out what drives me and where my strengths and weaknesses lie, I want to take an unconventional route: on this website, I use tennis and data analytics, two seemingly unrelated disciplines, to illustrate how I tick and what matters to me. 
