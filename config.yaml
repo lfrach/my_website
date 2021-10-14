@@ -95,11 +95,11 @@ params:
       - image: teamwork.jpg
         subtitle: Nothing amplifies success more than working in teams
         title: 3. Teamwork
-        url: blogs/magna
+        url: blogs/teamwork
       - image: success.jpg
         subtitle: There's nothing like winning a trophy or cracking the code
         title: 4. Success
-        url: blogs/ipsum
+        url: blogs/success
 
   two:
     buttonText: Connect here

@@ -1,0 +1,58 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:13-05:00"
+description: TBD
+draft: false
+image: success.jpg
+keywords: ""
+slug: success
+title: Success
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>Last but not least: success. While I have discussed frustration and failure in some of the other blogs, the prospect of eventual success is clearly important. Whether the final output of some analysis or the award ceremony at a major tennis tournament, a fair chance to be successful is a major driver of motivation and perseverance.</p>
+<p>Roger Federer, as displayed in the picture above, is one inspiring person in that regard. Even though he has won it all, he is still hungry to keep getting himself out there and play for the biggest trophies in tennis. While injuries and early losses set him back numerous times, the successes are what counts in the end.</p>
+<p>A similar thing can be said about data analytics. Error messages, impenetrable data clusters, and confusing analysis results - all of these can set you back. But in the end it’s the opportunity to overcome these challenges that matters. The real option to be successful.</p>
+<p>The following code serves as the final example of a project of mine. I analyzed temperature anomalies over the past decades to further validate the fact that the climate is warming. While this analysis is rather basic, it hints at the fact that data analysis and an understanding of how the climate reacts to changes in human bevahiour will become increasingly important in the future. Important to <strong>be successful</strong> in overcoming the ultimate challenge of the 21st century.</p>
+<div id="climate-change-and-temperature-anomalies" class="section level1">
+<h1>Climate change and temperature anomalies</h1>
+<pre class="r"><code>weather &lt;- 
+  read_csv(&quot;https://data.giss.nasa.gov/gistemp/tabledata_v4/NH.Ts+dSST.csv&quot;, 
+           skip = 1, 
+           na = &quot;***&quot;)</code></pre>
+<pre><code>## Rows: 142 Columns: 19</code></pre>
+<pre><code>## -- Column specification --------------------------------------------------------
+## Delimiter: &quot;,&quot;
+## dbl (19): Year, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, ...</code></pre>
+<pre><code>## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>tidyweather &lt;- weather %&gt;% 
+  select(1:13) %&gt;% 
+  pivot_longer(cols=2:13,
+               names_to=&quot;Month&quot;,
+               values_to=&quot;delta&quot;)</code></pre>
+<pre class="r"><code>tidyweather &lt;- tidyweather %&gt;%
+  mutate(date = ymd(paste(as.character(Year), Month, &quot;1&quot;)),
+         month = month(date, label=TRUE),
+         year = year(date))
+
+ggplot(tidyweather, aes(x=date, y = delta))+
+  geom_point()+
+  geom_smooth(color=&quot;red&quot;) +
+  theme_bw() +
+  labs (
+    title = &quot;Weather Anomalies&quot;, 
+    subtitle = &quot;Measured as deviations from base value in degrees celsius&quot;, 
+    y=&quot;Temperature deviation from base value&quot;, 
+    x=&quot;Year&quot;
+    )</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<pre><code>## Warning: Removed 3 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing missing values (geom_point).</code></pre>
+<p><img src="/blogs/blog5_files/figure-html/scatter_plot-1.png" width="672" /></p>
+</div>

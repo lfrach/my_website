@@ -1,0 +1,85 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T22:26:13-05:00"
+description: TBD
+draft: false
+image: success.jpg
+keywords: ""
+slug: success
+title: Success
+---
+
+Last but not least: success. While I have discussed frustration and failure in some of the other blogs, the prospect of eventual success is clearly important.  Whether the final output of some analysis or the award ceremony at a major tennis tournament, a fair chance to be successful is a major driver of motivation and perseverance. 
+
+Roger Federer, as displayed in the picture above, is one inspiring person in that regard. Even though he has won it all, he is still hungry to keep getting himself out there and play for the biggest trophies in tennis. While injuries and early losses set him back numerous times, the successes are what counts in the end. 
+
+A similar thing can be said about data analytics. Error messages, impenetrable data clusters, and confusing analysis results - all of these can set you back. But in the end it's the opportunity to overcome these challenges that matters. The real option to be successful. 
+
+The following code serves as the final example of a project of mine. I analyzed temperature anomalies over the past decades to further validate the fact that the climate is warming. While this analysis is rather basic, it hints at the fact that data analysis and an understanding of how the climate reacts to changes in human bevahiour will become increasingly important in the future. Important to **be successful** in overcoming the ultimate challenge of the 21st century.    
+
+
+```{r load-libraries, include=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(here)
+library(skimr)
+library(janitor)
+library(httr)
+library(readxl)
+library(vroom)
+library(infer)
+library(readr)
+library(dplyr)
+
+```
+
+
+
+### Climate change and temperature anomalies 
+
+
+```{r weather_data, cache=TRUE}
+
+weather <- 
+  read_csv("https://data.giss.nasa.gov/gistemp/tabledata_v4/NH.Ts+dSST.csv", 
+           skip = 1, 
+           na = "***")
+
+```
+
+
+
+```{r tidyweather}
+
+tidyweather <- weather %>% 
+  select(1:13) %>% 
+  pivot_longer(cols=2:13,
+               names_to="Month",
+               values_to="delta")
+```
+
+
+
+```{r scatter_plot}
+
+tidyweather <- tidyweather %>%
+  mutate(date = ymd(paste(as.character(Year), Month, "1")),
+         month = month(date, label=TRUE),
+         year = year(date))
+
+ggplot(tidyweather, aes(x=date, y = delta))+
+  geom_point()+
+  geom_smooth(color="red") +
+  theme_bw() +
+  labs (
+    title = "Weather Anomalies", 
+    subtitle = "Measured as deviations from base value in degrees celsius", 
+    y="Temperature deviation from base value", 
+    x="Year"
+    )
+
+```
