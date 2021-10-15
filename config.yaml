@@ -56,11 +56,11 @@ params:
   name: Your name
   navigation:
     button1:
-      - name: Get Started
-        url: blogs
+      - name: Find me at LBS
+        url: https://www.google.de/maps/place/London+Business+School/@51.5261552,-0.1628567,17z/data=!3m1!4b1!4m5!3m4!1s0x48761ac6309dd51b:0xbf9c52f1c02b7723!8m2!3d51.5261552!4d-0.160668
     button2:
-      - name: Log In
-        url: '#'
+      - name: LinkedIn
+        url: https://www.linkedin.com/in/louis-frach/
     links:
       - name: Home
         url: '#'
