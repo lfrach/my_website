@@ -64,12 +64,10 @@ params:
     links:
       - name: Home
         url: '#'
-      - name: Blogs
+      - name: Blog Overview
         url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+      - name: Meme Gallery
+        url: blogs/pictures
     menu: Menu
     subtitle: By HTML5 Up
     title: Forty
