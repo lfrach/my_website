@@ -3,9 +3,9 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:13-05:00"
-description: In this section, I discuss the importance of small and big successes
+description: This section is a work in progress gallery of some of my favorite memes on data analytics and tennis
 draft: false
-image: 
+image: meme_wallpaper.jpg
 keywords: ""
 slug: pictures
 title: Meme Gallery
@@ -14,13 +14,25 @@ title: Meme Gallery
 This section is a work in progress gallery of some of my favorite memes on data analytics and tennis. Clearly, it should be taken with a grain of salt and none of the pictures are supposed to offend anyone. I hope you enjoy!
 
 
-Statistics 101
-![Source: DataMemes](meme1.jpg)
+```{r load-libraries, include=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(here)
+library(skimr)
+library(janitor)
+library(httr)
+library(readxl)
+library(vroom)
+library(infer)
+library(readr)
+library(dplyr)
+
+```
 
 
-Excel users when there are >1m rows
-![Source: DataMemes](meme2.jpg)
 
-
-A master at work
-![Source: TennisTemple](meme3.jpg)
+```{r directors, echo=FALSE, out.width="100%"}
+knitr::include_graphics(here::here("images", "meme1.jpg"), error = FALSE)
+```
