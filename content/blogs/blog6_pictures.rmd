@@ -7,29 +7,12 @@ description: This section is a work in progress gallery of some of my favorite m
 draft: false
 image: meme_wallpaper.jpg
 keywords: ""
-slug: pictures
+slug: memes
 title: Meme Gallery
 ---
 
 This section is a work in progress gallery of some of my favorite memes on data analytics and tennis. Clearly, it should be taken with a grain of salt and none of the pictures are supposed to offend anyone. I hope you enjoy!
 
-
-```{r load-libraries, include=FALSE}
-library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
-library(mosaic)
-library(ggthemes)
-library(lubridate)
-library(here)
-library(skimr)
-library(janitor)
-library(httr)
-library(readxl)
-library(vroom)
-library(infer)
-library(readr)
-library(dplyr)
-
-```
 
 
 
