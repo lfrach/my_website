@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T21:28:43-05:00"
-description: ""
+description: Here, I describe how tennis and data analytics are two related disciplines
 draft: false
 image: collage.jpg
 keywords: ""

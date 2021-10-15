@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T21:28:43-05:00"
-description: ""
+description: In this introductory section you can learn more about me
 draft: false
 image: person.jpg
 keywords: ""

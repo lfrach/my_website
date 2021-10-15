@@ -1,9 +1,9 @@
 ---
 date: "2017-10-31T22:27:21-05:00"
 draft: false
-image: pic02.jpg
+image: coding1.jpg
 slug: blogs
-title: Lifestyle
+title: Tennis, Data Analytics, and Me
 ---
 
-My blogs about technology and lifestyle.
+My blogs about two seemingly unrelated disciplines and how they describe who I am.
