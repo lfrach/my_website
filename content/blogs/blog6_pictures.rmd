@@ -7,15 +7,21 @@ description: This section is a work in progress gallery of some of my favorite m
 draft: false
 image: meme_wallpaper.jpg
 keywords: ""
-slug: memes
+slug: gallery
 title: Meme Gallery
 ---
 
 This section is a work in progress gallery of some of my favorite memes on data analytics and tennis. Clearly, it should be taken with a grain of salt and none of the pictures are supposed to offend anyone. I hope you enjoy!
 
 
+### Expectation management
+![Source: Atot.io](https://www.atoti.io/wp-content/uploads/2021/07/e2zzqa23bfl61.jpg)
 
 
-```{r directors, echo=FALSE, out.width="100%"}
-knitr::include_graphics(here::here("images", "meme1.jpg"), error = FALSE)
-```
+
+
+### A master at work
+![Source: TennisTemple](https://i.imgflip.com/4ra84e.jpg)
+
+### Statistics 101
+![Source: TennisTemple](https://www.siliconrepublic.com/wp-content/uploads/2015/10/Statistician_memes_02.jpg)

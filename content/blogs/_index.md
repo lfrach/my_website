@@ -6,4 +6,4 @@ slug: blogs
 title: Blog Overview
 ---
 
-My blogs about two seemingly unrelated disciplines and how they describe who I am.
+My blogs about two seemingly unrelated disciplines and how they describe who I am. Plus some memes.

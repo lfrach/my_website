@@ -67,7 +67,7 @@ params:
       - name: Blog Overview
         url: blogs
       - name: Meme Gallery
-        url: blogs/memes
+        url: blogs/gallery
     menu: Menu
     subtitle: By HTML5 Up
     title: Forty
