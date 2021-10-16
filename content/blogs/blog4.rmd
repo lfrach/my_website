@@ -3,9 +3,9 @@ categories:
 - ""
 - ""
 date: "2017-10-31T21:28:43-05:00"
-description: This blog emphasizes the importance of teamwork
+description: ""
 draft: false
-image: teampic.jpg
+image: teamwork.jpg
 keywords: ""
 slug: teamwork
 title: Teamwork
@@ -21,3 +21,15 @@ Nothing amplifies success more than working in teams - a statement that I truly 
 
 Whether it is on the the job, in the the classroom, or on the tennis court, I believe that a strong team spirit is essential to long-term success!
 
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(ggthemes)
+library(GGally)
+library(readxl)
+library(here)
+library(skimr)
+library(janitor)
+library(broom)
+library(tidyquant)
+
+```
