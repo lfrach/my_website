@@ -10,7 +10,8 @@ params:
     subtitle: Keep scrolling to find out how these three seemingly unrelated things are connected and find out more about me along the way.
     title: Tennis, Data Analytics, and Me 
   blog: {}
-  contact:
+  contact: 
+  formEmail: lfrach.mfa2022@london.edu
     address:
       - city: London, NW1 4SA
         country: United Kingdom
