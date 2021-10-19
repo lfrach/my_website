@@ -69,8 +69,8 @@ params:
       - name: Meme Gallery
         url: blogs/gallery
     menu: Menu
-    subtitle: By HTML5 Up
-    title: Forty
+    subtitle: Welcome!
+    title: Louis Frach
   tiles:
     enable: yes
     showcase:
