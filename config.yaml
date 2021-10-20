@@ -12,6 +12,8 @@ params:
   blog: {}
   contact: 
     formEmail: lfrach.mfa2022@london.edu
+    action: "https://formspree.io/f/xwkajoag"
+    method: "POST"
     address:
       - city: London, NW1 4SA
         country: United Kingdom
