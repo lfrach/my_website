@@ -11,9 +11,7 @@ params:
     title: Tennis, Data Analytics, and Me 
   blog: {}
   contact: 
-    formEmail: lfrach.mfa2022@london.edu
-    action: "https://formspree.io/f/xwkajoag"
-    method: "POST"
+    formEmail: f/xwkajoag
     address:
       - city: London, NW1 4SA
         country: United Kingdom
