@@ -11,14 +11,14 @@ params:
     title: Tennis, Data Analytics, and Me 
   blog: {}
   contact: 
-  formEmail: lfrach.mfa2022@london.edu
+  #formEmail: lfrach.mfa2022@london.edu
     address:
       - city: London, NW1 4SA
         country: United Kingdom
         street: Regent's Park
         title: London Business School Address
-    buttonClear: Clear
-    buttonSend: Send message
+    #buttonClear: Clear
+    #buttonSend: Send message
     email:
       - email: lfrach.mfa2022@london.edu
         title: Personal Email
