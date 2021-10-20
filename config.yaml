@@ -11,7 +11,7 @@ params:
     title: Tennis, Data Analytics, and Me 
   blog: {}
   contact: 
-  formEmail: lfrach.mfa2022@london.edu
+    formEmail: lfrach.mfa2022@london.edu
     address:
       - city: London, NW1 4SA
         country: United Kingdom
@@ -28,7 +28,7 @@ params:
         title: London Business School Phone
   custom_css: []
   custom_js: []
-  description: Your description
+  description: 
   error404:
     heading: Page couldn't be found
     text: Please visit [this page](/)
